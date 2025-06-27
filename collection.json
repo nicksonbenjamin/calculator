@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "afbd6153-e98d-4557-89cd-c8958e757c16",
+		"name": "Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2402533"
+	},
+	"item": [
+		{
+			"name": "add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response is result\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('result');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"a\": {{op1}},\r\n  \"b\": {{op2}},\r\n  \"operation\": \"add\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{baseUrl}}:3000/calculator/calculate",
+					"protocol": "http",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"port": "3000",
+					"path": [
+						"calculator",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sub",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response is result\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('result');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"a\": {{op1}},\r\n  \"b\": {{op2}},\r\n  \"operation\": \"subtract\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculator/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculator",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "multiply",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response is result\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('result');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"a\": {{op1}},\r\n  \"b\": {{op2}},\r\n  \"operation\": \"multiply\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{baseurl}}:3000/calculator/calculate",
+					"protocol": "http",
+					"host": [
+						"{{baseurl}}"
+					],
+					"port": "3000",
+					"path": [
+						"calculator",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "divide",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response is result\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('result');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"a\": {{op1}},\r\n  \"b\": {{op2}},\r\n  \"operation\": \"divide\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculator/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculator",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
